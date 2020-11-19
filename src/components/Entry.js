@@ -7,7 +7,7 @@ class Entry extends React.Component {
             <div>
                 <h1>{entry.title}</h1>
                 <p>{entry.content}</p>
-                <p>{entry.id}</p>
+                <p>Entry Id:{entry.id}</p>
             </div>
         )
     }

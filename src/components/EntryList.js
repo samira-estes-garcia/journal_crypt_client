@@ -1,6 +1,6 @@
 import React from 'react';
 import Entry from './Entry.js';
-import { connect } from 'react-dom';
+import { connect } from 'react-redux';
 
 class EntryList extends React.Component {
     render() {
@@ -13,6 +13,7 @@ class EntryList extends React.Component {
                 />
             )
         })
+
         return(
             <ul>
                 {entryList}
@@ -21,4 +22,6 @@ class EntryList extends React.Component {
     }
 }
 
-export default EntryList;
+const mapStateToProps = globalState => ({ entries: globalState.entries })
+
+export default connect(mapStateToProps)(EntryList);
