@@ -22,6 +22,11 @@ const entriesReducer = (state = { entries: [], loading: false }, action) => {
                 ...state,
                 entries: [...state.entries, action.payload],
             }
+        // case 'LOGIN_USER':
+        //     return {
+        //         ...state,
+        //         user: [...state.user, action.payload]
+        //     }
         default: 
             return state;
     }

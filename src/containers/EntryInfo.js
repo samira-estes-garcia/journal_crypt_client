@@ -1,20 +1,19 @@
 import React from 'react'
 import { connect }  from 'react-redux';
-import { Link } from 'react-router-dom';
 import { fetchEntry } from '../actions/entryActions';
 import SpecificEntry from '../components/entries/SpecificEntry';
 
 class EntryInfo extends React.Component {
 
-    componentDidMount() {
+    componentDidMount = () => {
         this.props.fetchEntryDispatch(this.props.match.params.id);
     }
 
     handleLoading = () => {
-        if(this.props.loading) {
-            return <div>Loading...</div>
-        } else {
+        if (!this.props.loading && this.props.entry) {
             return <SpecificEntry entry={this.props.entry} />
+        } else {
+            return <div>Loading...</div>
         }
     }
 

@@ -3,7 +3,7 @@ import React from 'react';
 class Profile extends React.Component {
     render() {
         return(
-            <div>
+            <div className="text-center">
                 <h1>{localStorage.getItem("first_name")}</h1>
             </div>
         )

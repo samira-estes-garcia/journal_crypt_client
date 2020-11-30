@@ -30,7 +30,7 @@ class EntryAdd extends React.Component {
     render() {
         console.log(this.props)
         return (
-            <div>
+            <div className="text-center">
                 <h1>Create A New Entry</h1>
                 <form onSubmit={(event) => this.handleOnSubmit(event)}>
                     <label>Title</label>

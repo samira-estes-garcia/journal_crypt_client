@@ -1,9 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 const Home = () => {
     return (
-        <div>
+        <div className="text-center">
             <h1>Home Page</h1>
         </div>
     )

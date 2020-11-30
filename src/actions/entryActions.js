@@ -44,3 +44,22 @@ export const createEntry = (data, history) => {
         })
     }
 }
+
+// export const loginUser = (data) => {
+//     fetch('http://localhost:3001/api/user_token', {
+//             method: 'POST',
+//             body: JSON.stringify({user: data}),
+//             headers: { 'Content-Type': 'application/json' }
+//         })
+//         .then(response => response.json())
+//         .then(data => {
+//             localStorage.setItem("jwt", data.jwt);
+//             localStorage.setItem("user_id", data.userDetails.id);
+//             localStorage.setItem("first_name", data.userDetails.first_name);
+//             console.log(localStorage.getItem('user_id'));
+//             //dispatch user info into global state
+//             this.props.history.push('/entries');
+//             //force rerender app
+//         })
+//         .catch(error => console.log('error', error));
+// }

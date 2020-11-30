@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route, Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 class Navigation extends React.Component {
     constructor(props) {
@@ -19,7 +19,7 @@ class Navigation extends React.Component {
         }
 
         return (
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark text-center">
           <ul className="navbar-nav mr-auto">
               <li className="nav-item">
                   <NavLink exact className="nav-link" activeClassName="active" to="/">Home</NavLink>

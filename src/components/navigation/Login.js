@@ -4,9 +4,29 @@ class Login extends React.Component {
     constructor() {
         super()
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.state = {
+            email: '',
+            password: ''
+        }
     }
 
-    handleSubmit  = (event) => {
+    // handleOnChange = event => {
+    //     this.setState({
+    //         [event.target.name]: event.target.value
+    //     })
+    // }
+
+    // handleSubmit = event => {
+    //     event.preventDefault();
+    //     this.props.loginUser(this.state)
+    //     this.setState({
+    //         email: '',
+    //         password: '',
+    //     })
+
+    // }
+
+    handleSubmit = (event) => {
         event.preventDefault();
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
@@ -32,7 +52,7 @@ class Login extends React.Component {
 
     render() {
         return(
-        <div>
+        <div className="text-center">
             <h1>Log In</h1>
             <form onSubmit={this.handleSubmit}>
                 <div className="form-group">
