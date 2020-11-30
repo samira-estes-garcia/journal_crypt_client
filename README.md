@@ -1,6 +1,6 @@
 # Journal Crypt Client
 
-## A React Application
+## A React/Redux Application
 
 Journal Crypt uses a Rails backend and a React front end. It allows users to create secure journal entries that only they can access. They can edit or delete their entries, and will soon have the option to encrypt each entry.
 
