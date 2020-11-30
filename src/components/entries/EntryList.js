@@ -17,7 +17,7 @@ class EntryList extends React.Component {
         })
 
         return(
-            <ul>
+            <ul className="p-3">
                 {entryList}
             </ul>
         )

@@ -52,8 +52,8 @@ class Login extends React.Component {
 
     render() {
         return(
-        <div className="text-center">
-            <h1>Log In</h1>
+        <div className="p-3">
+            <h1 className="text-center">Log In</h1>
             <form onSubmit={this.handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="email">Email</label>

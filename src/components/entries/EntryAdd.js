@@ -30,25 +30,30 @@ class EntryAdd extends React.Component {
     render() {
         console.log(this.props)
         return (
-            <div className="text-center">
-                <h1>Create A New Entry</h1>
+            <div className="p-3">
+                <h1 className="text-center">Create A New Entry</h1>
                 <form onSubmit={(event) => this.handleOnSubmit(event)}>
-                    <label>Title</label>
-                    <input 
-                        type="text"
-                        name="title"
-                        value={this.state.title}
-                        onChange={(event) => this.handleOnChange(event)}
-                    />
-                    <br></br>
-                    <label>Content</label>
-                    <textarea 
-                        type="text"
-                        name="content"
-                        value={this.state.content}
-                        onChange={(event) => this.handleOnChange(event)}
-                    /><br></br>
-                    <input type="submit" /> 
+                    <div className="form-group">
+                        <label htmlFor="title">Title</label>
+                        <input 
+                            type="text"
+                            name="title"
+                            value={this.state.title}
+                            onChange={(event) => this.handleOnChange(event)}
+                            className="form-control"
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label>Content</label>
+                        <textarea 
+                            type="text"
+                            name="content"
+                            value={this.state.content}
+                            onChange={(event) => this.handleOnChange(event)}
+                            className="form-control"
+                        />
+                    </div>
+                    <button type="submit" className="btn btn-success">Submit</button>
                 </form>
             </div>
         )

@@ -58,8 +58,8 @@ class EntryEdit extends React.Component {
     render() {
         console.log(this.state)
         return (
-            <div className="text-center">
-                <h1>{this.state.title}</h1>
+            <div className="p-3">
+                <h1 className="text-center">{this.state.title}</h1>
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-group">
                         <label>Title</label>
@@ -69,8 +69,8 @@ class EntryEdit extends React.Component {
                         <label>Content</label>
                         <textarea type="text" name="content" value={this.state.content} className="form-control" onChange={this.handleChange} />
                     </div>
-                    <button type="submit" className="btn btn-success">Update</button>
-                    <button type="button" onClick={this.handleCancel} className="btn btn-secondary">Cancel</button>
+                    <button type="submit" className="btn btn-success mr-3 px-4">Update</button>
+                    <button type="button" onClick={this.handleCancel} className="btn btn-primary px-4">Cancel</button>
                 </form>
             </div>
         )

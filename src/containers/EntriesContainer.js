@@ -21,12 +21,12 @@ class EntriesContainer extends React.Component {
 
     render() {
         return(
-            <div>
-                <div className="d-flex justify-content-center">
-                    <h1>Journal Entries</h1>
-                    <Link to="/entries/new" className="btn btn-outline-success">Create Entry</Link>
-                </div>
+            <div className="p-3">
+                <h1 className="text-center">Journal Entries</h1>
                 {this.handleLoading()}
+                <div className="text-center">
+                    <Link to="/entries/new" className="btn btn-outline-success text-center">Create Entry</Link>
+                </div>
             </div>
         )
     }

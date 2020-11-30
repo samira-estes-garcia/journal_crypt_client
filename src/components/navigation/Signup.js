@@ -33,8 +33,8 @@ class Signup extends React.Component {
 
     render() {
         return (
-           <div className="text-center">
-               <h1>Sign Up</h1>
+           <div className="p-3">
+               <h1 className="text-center">Sign Up</h1>
                <form onSubmit={this.handleSubmit}>
                    <div className="form-group">
                       <label htmlFor="first_name">First Name</label>
