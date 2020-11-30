@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 class EntryList extends React.Component {
     render() {
         const { entries } = this.props
+        //need current user id
+        console.log(entries)
         const entryList = entries.map(entryObj => {
             return (
                 <Entry

@@ -1,8 +1,9 @@
 import React from 'react'
-import EntryList from '../components/EntryList.js';
-import EntryForm from '../components/EntryForm.js';
+import EntryList from '../components/entries/EntryList.js';
 import { connect }  from 'react-redux'
 import { fetchEntries } from '../actions/entryActions';
+import { createEntry } from '../actions/entryActions';
+import { Link } from 'react-router-dom'
 
 class EntriesContainer extends React.Component {
 
@@ -22,8 +23,8 @@ class EntriesContainer extends React.Component {
         return(
             <div>
                 <h1>Journal Entries</h1>
+                <Link to="/entries/new" className="btn btn-outline-success">Create Entry</Link>
                 {this.handleLoading()}
-                <EntryForm />
             </div>
         )
     }
@@ -35,6 +36,9 @@ const mapDispatchToProps = dispatch => {
     return {
         fetchEntriesDispatch: () => {
             dispatch(fetchEntries())
+        },
+        createEntryDispatch: (object) => {
+            dispatch(createEntry(object))
         }
     }
 }

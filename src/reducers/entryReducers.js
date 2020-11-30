@@ -11,6 +11,12 @@ const entriesReducer = (state = { entries: [], loading: false }, action) => {
                 entries: action.payload,
                 loading: false
             }
+        case 'GET_ENTRY':
+            return {
+                ...state,
+                entry: action.payload,
+                loading: false
+            }
         case 'CREATE_ENTRY':
             return {
                 ...state,
